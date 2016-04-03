@@ -1,0 +1,11 @@
+.rbenv-version
+.ruby-version
+.bundle
+Procfile.dev
+tmp/**/*
+tmp
+.DS_Store
+*.dump
+
+*.swp
+*.swo

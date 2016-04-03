@@ -1,0 +1,17 @@
+#! /usr/bin/ruby
+require_relative '../src/prime_formatter'
+
+number_of_primes = 10
+
+def kill(message)
+  puts message
+  exit
+end
+
+kill("Usage: prime-printer [NUMBER_OF_PRIMES: Positive Integer]") if ARGV.length > 1
+if ARGV.length == 1 
+  number_of_primes = Integer(ARGV[0]) rescue kill("Usage: prime-printer [NUMBER_OF_PRIMES]") 
+  kill("Usage: prime-printer [NUMBER_OF_PRIMES: Positive Integer]") if number_of_primes < 1
+end
+
+PrimeFormatter.run(number_of_primes)
